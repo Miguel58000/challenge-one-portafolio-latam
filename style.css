@@ -1,132 +1,268 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
-:root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+/* Resetear estilos y definir estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
 }
-ol, ul,li {
-    list-style: none;
+
+.tudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
-a{
+
+/* Ajuste del tamaño de las imágenes */
+.skills__img,
+.hobbies__img,
+.academic__courses__item__img,
+.experience__img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Estilos del Menú */
+.menu {
+    background-color: #2c3e50;
+    padding: 10px 0;
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu__title {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.menu nav {
+    margin-top: 10px;
+}
+
+.menu__list {
+    list-style-type: none;
+}
+
+.menu__list__item {
+    margin-bottom: 10px;
+}
+
+.menu__list__item a {
     text-decoration: none;
-    color: var(--cor-de-link);
+    color: #fff;
+    font-size: 1.2rem;
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
-/*Sección Menu*/
-
-section.menu{
-
+.menu__list__item__contato {
+    margin-top: 20px;
+    text-align: center;
 }
 
-/*Sección Title*/
-
-section.title{
-
+.menu__list__item__contato a {
+    color: #fff;
+    font-size: 1rem;
 }
 
-/*Sección About*/
-
-section.about{
-
+/* Estilos del Título */
+.title {
+    padding: 50px 0;
+    text-align: center;
 }
 
-/*Sección Hobbies*/
-
-section.hobbies{
-    
+.title__profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-/* Experiencia Académica*/
-
-section.academic{
-
+.title__bio {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-/* experiencia*/
-
-section.experience{
-
+.title__subsection {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
-/*Contacto*/
-
-section.formcontato{
-
+.title__network {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
-/*footeer*/
-
-section.footer{
-   
+.title__network__item {
+    margin: 0 10px;
 }
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
+.title__network__item a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1.2rem;
 }
 
-/*Mobile*/
-@media (min-width: 425px) {
+/* Estilos de las Secciones */
+.about, .skills, .hobbies, .academic, .experience, .formcontato, .footer {
+    padding: 50px 0;
+}
 
-/*Menu*/
+.about__title,
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title,
+.formcontato__title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
 
-/*Titulo*/
+/* Estilos de las cajas */
+.about__container,
+.skills__line,
+.hobbies__line,
+.academic__courses,
+.experience__box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-/*Sección sobre mi*/
+.about__paragraph {
+    text-align: justify;
+    margin-bottom: 20px;
+}
 
-/*Skills*/
+.skills__box,
+.hobbies__box,
+.academic__courses__box {
+    flex: 0 0 200px;
+    text-align: center;
+    margin: 20px;
+}
 
-/*Hobbies*/
- 
-/*Formación Académica*/
+.skills__img,
+.hobbies__img,
+.academic__courses__item__img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
 
-/*Experiencia Profesional*/
+.skills__name,
+.hobbies__name,
+.academic__courses__item__title {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
 
- /*Contacto*/
+.experience__img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
-/*Footer*/
+.experience__title,
+.experience__text {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
 
+.experience__repo {
+    display: block;
+    margin-top: 10px;
+}
+
+.experience__repo a {
+    text-decoration: none;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.experience__repo a:hover {
+    background-color: #34495e;
+}
+
+/* Estilos del formulario de contacto */
+.formcontato--esquerda {
+    flex: 0 0 50%;
+    padding: 0 20px;
+}
+
+.formcontato__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.formcontato__text {
+    flex: 0 0 50%;
+    padding: 0 20px;
+}
+
+.formcontato__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.formcontato__subtext {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.formcontato__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formcontato__input,
+.formcontato__textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formcontato__botao {
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formcontato__botao:hover {
+    background-color: #34495e;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #2c3e50;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 1rem;
 }
